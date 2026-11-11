@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MECUSA - Centro de masajes y bienestar. Regálate un momento de calma y renovación.">
+  <title>MECUSA | Centro de Masajes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="contenedor barra">
+      <a class="marca" href="#inicio" aria-label="MECUSA, inicio">
+        <!-- Reemplaza images/logo-mecusa.png por tu archivo de logo -->
+        <img class="logo" src="IMAGENES/LOGO.jpg" alt="Logo de MECUSA" onerror="this.style.display='none'">
+        <span class="marca-texto">MECUSA<small>Centro de masajes</small></span>
+      </a>
+      <nav class="navegacion" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#destacados">Destacados</a>
+        <a href="#ofertas">Ofertas</a>
+        <a href="#nosotros">Nosotros</a>
+      </nav>
+      <a class="boton boton-nav" href="#contacto">Reserva tu cita</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="portada" id="inicio">
+      <div class="portada-fondo"></div>
+      <div class="contenedor portada-contenido">
+        <span class="etiqueta"><span class="punto"></span> TU ESPACIO DE BIENESTAR</span>
+        <h1>Un momento para ti.<br><em>Una pausa que renueva.</em></h1>
+        <p>Descubre el equilibrio entre cuerpo y mente con una experiencia de relajación pensada para ti.</p>
+        <div class="acciones">
+          <a class="boton" href="#servicios">Descubrir servicios <span aria-hidden="true">↗</span></a>
+          <a class="enlace-suave" href="#nosotros">Conoce MECUSA</a>
+        </div>
+        <div class="portada-nota"><span class="icono-circulo">✦</span><span>Bienestar, calma y cuidado<br><strong>en un solo lugar</strong></span></div>
+      </div>
+      <!-- Cambia images/portada.jpg por tu propia fotografía -->
+      <div class="portada-foto" role="img" aria-label="Ambiente tranquilo para masajes"></div>
+    </section>
+
+    <section class="beneficios">
+      <div class="contenedor beneficios-grid">
+        <div><span class="beneficio-icono">✧</span><span><strong>Atención personalizada</strong><small>Un espacio para tus necesidades</small></span></div>
+        <div><span class="beneficio-icono">❋</span><span><strong>Ambiente relajante</strong><small>Desconecta y recupera energía</small></span></div>
+        <div><span class="beneficio-icono">♡</span><span><strong>Tu bienestar importa</strong><small>Tiempo dedicado a cuidarte</small></span></div>
+      </div>
+    </section>
+
+    <section class="seccion" id="servicios">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <div><span class="sobretitulo">ENCUENTRA TU MOMENTO</span><h2>Servicios para sentirte <em>mejor</em></h2></div>
+          <p>Elige la experiencia que mejor se adapte a lo que necesitas hoy.</p>
+        </div>
+        <div class="categorias-grid">
+          <a class="categoria" href="#destacados"><span class="categoria-numero">01</span><span class="categoria-simbolo">◌</span><h3>Relajación</h3><p>Libera tensiones y disfruta de una pausa reconfortante.</p><span class="flecha">↗</span></a>
+          <a class="categoria categoria-lila" href="#destacados"><span class="categoria-numero">02</span><span class="categoria-simbolo">❋</span><h3>Bienestar corporal</h3><p>Dedica tiempo a tu cuerpo y a tu sensación de equilibrio.</p><span class="flecha">↗</span></a>
+          <a class="categoria categoria-verde" href="#destacados"><span class="categoria-numero">03</span><span class="categoria-simbolo">✧</span><h3>Cuidado personal</h3><p>Una experiencia tranquila para renovar tu energía.</p><span class="flecha">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion seccion-suave" id="destacados">
+      <div class="contenedor">
+        <div class="encabezado-seccion">
+          <div><span class="sobretitulo">SELECCIÓN MECUSA</span><h2>Experiencias <em>destacadas</em></h2></div>
+          <p>Presenta aquí tus servicios favoritos, con sus precios y detalles.</p>
+        </div>
+        <div class="productos-grid">
+          <article class="producto">
+            <div class="producto-imagen imagen-uno"><img src="IMAGENES/relajacion.jpg" alt="Imagen del servicio de masaje relajante" onerror="this.style.display='none'"><span class="producto-etiqueta">FAVORITO</span></div>
+            <div class="producto-info"><div class="producto-titulo"><h3>Masaje relajante</h3><span class="precio">S/ --</span></div><p>Una pausa para aliviar el estrés cotidiano y disfrutar de tranquilidad.</p><a href="#contacto" class="producto-link">Consultar servicio <span>↗</span></a></div>
+          </article>
+          <article class="producto">
+            <div class="producto-imagen imagen-dos"><img src="images/servicio-2.jpg" alt="Imagen del servicio de bienestar corporal" onerror="this.style.display='none'"></div>
+            <div class="producto-info"><div class="producto-titulo"><h3>Bienestar corporal</h3><span class="precio">S/ --</span></div><p>Un momento de cuidado personalizado para reconectar contigo.</p><a href="#contacto" class="producto-link">Consultar servicio <span>↗</span></a></div>
+          </article>
+          <article class="producto">
+            <div class="producto-imagen imagen-tres"><img src="images/servicio-3.jpg" alt="Imagen de experiencia de cuidado personal" onerror="this.style.display='none'"></div>
+            <div class="producto-info"><div class="producto-titulo"><h3>Experiencia MECUSA</h3><span class="precio">S/ --</span></div><p>Combina calma y atención en una experiencia especial para ti.</p><a href="#contacto" class="producto-link">Consultar servicio <span>↗</span></a></div>
+          </article>
+        </div>
+        <p class="nota-edicion">Edita los nombres, descripciones y precios según los servicios reales de tu negocio.</p>
+      </div>
+    </section>
+
+    <section class="oferta" id="ofertas">
+      <div class="contenedor oferta-contenido">
+        <div class="oferta-decoracion" aria-hidden="true">✦</div>
+        <div><span class="sobretitulo">UN REGALO PARA TI</span><h2>Tu bienestar merece<br><em>un momento especial.</em></h2><p>Publica aquí tu promoción del mes, paquetes especiales o descuentos por primera visita.</p></div>
+        <div class="oferta-accion"><span class="oferta-texto">OFERTA ESPECIAL</span><a href="#contacto" class="boton boton-claro">Quiero más información <span>↗</span></a><small>*Reemplaza este texto por las condiciones de tu oferta.</small></div>
+      </div>
+    </section>
+
+    <section class="seccion nosotros" id="nosotros">
+      <div class="contenedor nosotros-grid">
+        <div class="nosotros-imagen">
+          <!-- Cambia images/nosotros.jpg por una foto de tu local o equipo -->
+          <img src="images/nosotros.jpg" alt="Espacio de atención de MECUSA" onerror="this.style.display='none'">
+          <div class="sello"><span>Tu pausa</span><strong>MECUSA</strong><span>tu bienestar</span></div>
+        </div>
+        <div class="nosotros-texto"><span class="sobretitulo">CONÓCENOS</span><h2>Bienvenido a<br><em>MECUSA</em></h2>
+          <p>Somos un centro dedicado a crear un espacio agradable donde puedas hacer una pausa, recibir atención cercana y dedicarte tiempo.</p>
+          <p>Queremos que cada visita sea una oportunidad para desconectar de la rutina y priorizar tu bienestar.</p>
+          <div class="dato-local"><span class="dato-icono">⌖</span><div><strong>Visítanos</strong><p><!-- Reemplaza con la dirección exacta -->[Escribe aquí tu dirección completa, distrito y ciudad]</p></div></div>
+          <div class="dato-local"><span class="dato-icono">◷</span><div><strong>Horario de atención</strong><p>[Escribe aquí tus días y horarios]</p></div></div>
+          <a class="boton" href="#contacto">Contáctanos <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+      <div class="contenedor contacto-interior"><div><span class="sobretitulo">ESTAMOS PARA ATENDERTE</span><h2>Tu momento de bienestar<br><em>comienza aquí.</em></h2></div><div class="contacto-datos"><p><strong>Teléfono / WhatsApp:</strong> [Coloca tu número]</p><p><strong>Dirección:</strong> [Coloca tu dirección]</p><a class="boton boton-claro" href="https://wa.me/" target="_blank" rel="noopener">Escríbenos por WhatsApp ↗</a><small>Para activar el enlace, añade tu número al final de wa.me en el HTML, con código de país y sin signos.</small></div></div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-principal">
+      <a class="marca marca-pie" href="#inicio"><span class="marca-texto">MECUSA<small>Centro de masajes</small></span></a>
+      <p>Un espacio para respirar, relajarte y volver a ti.</p>
+      <nav aria-label="Enlaces del pie de página"><a href="#servicios">Servicios</a><a href="#ofertas">Ofertas</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></nav>
+    </div>
+    <div class="contenedor pie-final"><span>© 2026 MECUSA. Todos los derechos reservados.</span><a href="#inicio">Volver arriba ↑</a></div>
+  </footer>
+</body>
+</html>

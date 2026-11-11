@@ -1,0 +1,180 @@
+/* MECUSA — estilos principales
+   Cambia los colores aquí para personalizar el sitio. */
+:root {
+  --celeste: #dff3f5;
+  --celeste-fuerte: #a8dfe4;
+  --morado: #eee7f6;
+  --morado-fuerte: #8b78a8;
+  --verde: #dcece0;
+  --verde-fuerte: #4e7967;
+  --tinta: #263b3b;
+  --texto: #647574;
+  --blanco: #fff;
+  --fondo: #fbfdfc;
+  --borde: #e7eeeb;
+  --serif: "Playfair Display", Georgia, serif;
+  --sans: "DM Sans", Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--fondo); color: var(--tinta); font-family: var(--sans); font-size: 16px; line-height: 1.7; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+.contenedor { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
+.encabezado { background: rgba(255,255,255,.96); border-bottom: 1px solid var(--borde); position: relative; z-index: 5; }
+.barra { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.marca { display: inline-flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.logo { width: 48px; height: 48px; object-fit: contain; }
+.marca-texto { font-size: 1.4rem; font-weight: 700; letter-spacing: .16em; line-height: 1.2; }
+.marca-texto small { display: block; color: var(--texto); font-size: .61rem; font-weight: 500; letter-spacing: .08em; margin-top: 5px; }
+.navegacion { display: flex; align-items: center; gap: clamp(16px, 2.5vw, 34px); }
+.navegacion a, .pie nav a { font-size: .88rem; color: var(--texto); transition: color .2s; }
+.navegacion a:hover, .pie nav a:hover { color: var(--verde-fuerte); }
+.boton { min-height: 50px; display: inline-flex; align-items: center; justify-content: center; gap: 18px; padding: 12px 22px; border-radius: 4px; background: var(--verde-fuerte); color: white; font-size: .9rem; font-weight: 600; transition: transform .2s, background .2s; }
+.boton:hover { transform: translateY(-2px); background: #385e50; }
+.boton-nav { min-height: 44px; padding: 9px 16px; }
+.portada { min-height: 610px; position: relative; overflow: hidden; background: var(--celeste); display: flex; align-items: center; }
+.portada-fondo { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(223,243,245,.98) 0%, rgba(223,243,245,.94) 44%, rgba(223,243,245,.18) 100%); z-index: 1; }
+.portada-foto { position: absolute; inset: 0 0 0 48%; background: #d4e7e2 url("../images/portada.jpg") center/cover no-repeat; }
+.portada-contenido { position: relative; z-index: 2; padding-top: 78px; padding-bottom: 78px; }
+.etiqueta, .sobretitulo { color: var(--verde-fuerte); font-size: .72rem; font-weight: 700; letter-spacing: .17em; }
+.etiqueta { display: inline-flex; align-items: center; gap: 9px; }
+.punto { width: 7px; height: 7px; background: var(--verde-fuerte); border-radius: 50%; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2 { font-family: var(--serif); font-weight: 500; line-height: 1.16; letter-spacing: -.035em; }
+h1 { max-width: 650px; margin: 22px 0 20px; font-size: clamp(2.8rem, 5vw, 4.7rem); }
+h1 em, h2 em { color: var(--verde-fuerte); font-weight: 500; }
+.portada-contenido > p { max-width: 475px; color: #506968; font-size: 1.05rem; }
+.acciones { display: flex; align-items: center; flex-wrap: wrap; gap: 25px; margin-top: 30px; }
+.enlace-suave { font-size: .9rem; font-weight: 600; border-bottom: 1px solid #8aaca5; padding-bottom: 4px; }
+.portada-nota { display: flex; gap: 12px; align-items: center; margin-top: 52px; color: #5d7775; font-size: .82rem; line-height: 1.5; }
+.portada-nota strong { color: var(--tinta); }
+.icono-circulo { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; background: rgba(255,255,255,.7); color: var(--verde-fuerte); font-size: 1.2rem; }
+.beneficios { background: white; border-bottom: 1px solid var(--borde); }
+.beneficios-grid { display: grid; grid-template-columns: repeat(3, 1fr); padding-block: 26px; }
+.beneficios-grid > div { display: flex; align-items: center; gap: 14px; padding: 5px 24px; border-right: 1px solid var(--borde); }
+.beneficios-grid > div:first-child { padding-left: 0; }
+.beneficios-grid > div:last-child { border-right: 0; }
+.beneficio-icono { color: var(--morado-fuerte); font-size: 1.8rem; }
+.beneficios strong, .beneficios small { display: block; }
+.beneficios strong { font-size: .88rem; }
+.beneficios small { color: var(--texto); font-size: .75rem; margin-top: 2px; }
+.seccion { padding: 100px 0; }
+.encabezado-seccion { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 38px; }
+.encabezado-seccion h2, .nosotros h2, .contacto h2, .oferta h2 { font-size: clamp(2.2rem, 3.8vw, 3.3rem); margin: 10px 0 0; }
+.encabezado-seccion > p { max-width: 320px; color: var(--texto); font-size: .92rem; margin-bottom: 5px; }
+.categorias-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.categoria { min-height: 270px; padding: 28px; position: relative; background: var(--celeste); border-radius: 6px; transition: transform .2s; }
+.categoria:hover { transform: translateY(-5px); }
+.categoria-lila { background: var(--morado); }
+.categoria-verde { background: var(--verde); }
+.categoria-numero { color: #6e8582; font-size: .75rem; letter-spacing: .12em; }
+.categoria-simbolo { position: absolute; right: 28px; top: 25px; font-size: 2rem; color: var(--verde-fuerte); }
+.categoria h3 { font-family: var(--serif); font-size: 1.55rem; font-weight: 500; margin: 40px 0 9px; }
+.categoria p { color: #5e7472; max-width: 270px; font-size: .88rem; }
+.flecha { position: absolute; right: 28px; bottom: 24px; font-size: 1.2rem; }
+.seccion-suave { background: #f3f8f6; }
+.productos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.producto { background: white; border: 1px solid var(--borde); border-radius: 6px; overflow: hidden; }
+.producto-imagen { height: 235px; position: relative; overflow: hidden; display: grid; place-items: center; background: var(--celeste); }
+.producto-imagen img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+.imagen-dos { background: var(--morado); }
+.imagen-tres { background: var(--verde); }
+.producto-imagen::after { content: "MECUSA"; color: rgba(38,59,59,.25); font-family: var(--serif); font-size: 2rem; letter-spacing: .18em; }
+.producto-imagen:has(img:not([style*="display: none"]))::after { display: none; }
+.producto-etiqueta { position: absolute; top: 16px; left: 16px; z-index: 1; padding: 5px 9px; background: rgba(255,255,255,.9); color: var(--verde-fuerte); font-size: .62rem; font-weight: 700; letter-spacing: .1em; }
+.producto-info { padding: 22px; }
+.producto-titulo { display: flex; justify-content: space-between; gap: 12px; align-items: start; }
+.producto-titulo h3 { font-family: var(--serif); font-size: 1.3rem; font-weight: 500; margin-bottom: 8px; }
+.precio { color: var(--verde-fuerte); font-weight: 700; white-space: nowrap; font-size: .9rem; }
+.producto-info p { min-height: 52px; color: var(--texto); font-size: .84rem; }
+.producto-link { display: flex; justify-content: space-between; border-top: 1px solid var(--borde); padding-top: 14px; color: var(--verde-fuerte); font-size: .83rem; font-weight: 600; }
+.nota-edicion { color: var(--texto); text-align: center; font-size: .78rem; margin: 25px 0 0; }
+.oferta { padding: 72px 0; background: var(--morado); overflow: hidden; }
+.oferta-contenido { display: grid; grid-template-columns: 100px 1fr auto; align-items: center; gap: 35px; }
+.oferta-decoracion { display: grid; place-items: center; width: 88px; height: 88px; border: 1px solid #b9a9ce; border-radius: 50%; color: var(--morado-fuerte); font-size: 3rem; }
+.oferta h2 { margin-top: 10px; }
+.oferta p { max-width: 490px; margin: 18px 0 0; color: #6e6678; font-size: .9rem; }
+.oferta-accion { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.oferta-texto { color: #716185; font-size: .7rem; letter-spacing: .17em; font-weight: 700; }
+.boton-claro { background: var(--verde-fuerte); }
+.oferta-accion small, .contacto-datos small { max-width: 260px; color: #766d80; font-size: .7rem; line-height: 1.5; }
+.nosotros-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 8vw, 100px); align-items: center; }
+.nosotros-imagen { min-height: 490px; position: relative; background: var(--celeste); border-radius: 6px; overflow: hidden; }
+.nosotros-imagen > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.sello { position: absolute; right: 22px; bottom: 22px; width: 130px; height: 130px; display: flex; flex-direction: column; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,.92); color: var(--verde-fuerte); font-size: .7rem; line-height: 1.5; }
+.sello strong { font-family: var(--serif); font-size: 1.2rem; letter-spacing: .1em; }
+.nosotros-texto > p { color: var(--texto); font-size: .94rem; }
+.nosotros-texto h2 { margin: 12px 0 24px; }
+.dato-local { display: flex; gap: 15px; margin: 23px 0; }
+.dato-icono { display: grid; place-items: center; width: 40px; height: 40px; flex-shrink: 0; border-radius: 50%; background: var(--celeste); color: var(--verde-fuerte); font-size: 1.25rem; }
+.dato-local strong { font-size: .88rem; }
+.dato-local p { color: var(--texto); margin: 3px 0 0; font-size: .84rem; }
+.nosotros-texto .boton { margin-top: 7px; }
+.contacto { padding: 68px 0; background: var(--verde); }
+.contacto-interior { display: flex; justify-content: space-between; align-items: center; gap: 40px; }
+.contacto h2 { font-size: clamp(2rem, 3.5vw, 2.8rem); }
+.contacto-datos { min-width: 310px; }
+.contacto-datos p { margin-bottom: 8px; color: #506c61; font-size: .87rem; }
+.contacto-datos strong { color: var(--tinta); }
+.contacto-datos .boton { margin: 12px 0; }
+.contacto-datos small { display: block; color: #5c776b; }
+.pie { background: #253b39; color: white; }
+.pie-principal { min-height: 150px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.marca-pie .marca-texto { color: white; }
+.marca-pie .marca-texto small { color: #c4d5d0; }
+.pie-principal > p { margin: 0; color: #c4d5d0; font-size: .82rem; }
+.pie nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.pie nav a { color: #d6e2de; font-size: .8rem; }
+.pie-final { display: flex; justify-content: space-between; gap: 20px; padding-block: 18px; border-top: 1px solid rgba(255,255,255,.14); color: #b5c8c2; font-size: .72rem; }
+.pie-final a { color: white; }
+
+@media (max-width: 900px) {
+  .barra { gap: 16px; }
+  .navegacion { gap: 15px; }
+  .navegacion a { font-size: .8rem; }
+  .portada-foto { left: 40%; }
+  .portada-fondo { background: linear-gradient(90deg, rgba(223,243,245,.99) 0%, rgba(223,243,245,.94) 48%, rgba(223,243,245,.38) 100%); }
+  .oferta-contenido { grid-template-columns: 70px 1fr; gap: 24px; }
+  .oferta-decoracion { width: 68px; height: 68px; font-size: 2.3rem; }
+  .oferta-accion { grid-column: 2; }
+  .pie-principal { flex-wrap: wrap; padding-block: 30px; }
+}
+@media (max-width: 680px) {
+  .contenedor { width: min(100% - 32px, 540px); }
+  .barra { min-height: 76px; flex-wrap: wrap; padding-block: 12px; }
+  .marca-texto { font-size: 1.2rem; }
+  .logo { width: 40px; height: 40px; }
+  .navegacion { order: 3; width: 100%; justify-content: space-between; gap: 8px; padding: 5px 0 2px; }
+  .navegacion a { font-size: .75rem; }
+  .boton-nav { font-size: .78rem; padding: 8px 11px; min-height: 40px; }
+  .portada { min-height: 650px; align-items: end; }
+  .portada-foto { inset: 0; background-position: center; }
+  .portada-fondo { background: linear-gradient(180deg, rgba(223,243,245,.2) 0%, rgba(223,243,245,.83) 35%, rgba(223,243,245,.98) 62%, rgba(223,243,245,1) 100%); }
+  .portada-contenido { padding-top: 210px; padding-bottom: 42px; }
+  h1 { font-size: clamp(2.45rem, 10vw, 3.5rem); }
+  .portada-contenido > p { font-size: .94rem; }
+  .portada-nota { margin-top: 32px; }
+  .beneficios-grid { grid-template-columns: 1fr; padding-block: 12px; }
+  .beneficios-grid > div, .beneficios-grid > div:first-child { padding: 13px 0; border-right: 0; border-bottom: 1px solid var(--borde); }
+  .beneficios-grid > div:last-child { border-bottom: 0; }
+  .seccion { padding: 68px 0; }
+  .encabezado-seccion { display: block; margin-bottom: 28px; }
+  .encabezado-seccion > p { margin-top: 14px; }
+  .categorias-grid, .productos-grid { grid-template-columns: 1fr; }
+  .categoria { min-height: 235px; }
+  .producto-imagen { height: 250px; }
+  .producto-info p { min-height: 0; }
+  .oferta { padding: 55px 0; }
+  .oferta-contenido { grid-template-columns: 1fr; gap: 22px; }
+  .oferta-decoracion { width: 60px; height: 60px; }
+  .oferta-accion { grid-column: auto; }
+  .nosotros-grid { grid-template-columns: 1fr; gap: 35px; }
+  .nosotros-imagen { min-height: 340px; }
+  .contacto-interior { display: block; }
+  .contacto-datos { min-width: 0; margin-top: 28px; }
+  .pie-principal { display: block; }
+  .pie-principal > p { margin: 18px 0; }
+  .pie nav { gap: 15px; }
+  .pie-final { flex-direction: column; gap: 7px; }
+}
